@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/turing.dir/src/main.cpp.o CMakeFiles/turing.dir/src/Tape.cpp.o CMakeFiles/turing.dir/src/TuringMachine.cpp.o CMakeFiles/turing.dir/src/ConfigParser.cpp.o -o turing 

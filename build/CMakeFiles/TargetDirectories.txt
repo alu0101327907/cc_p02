@@ -1,0 +1,3 @@
+/workspaces/cc_p02/build/CMakeFiles/turing.dir
+/workspaces/cc_p02/build/CMakeFiles/edit_cache.dir
+/workspaces/cc_p02/build/CMakeFiles/rebuild_cache.dir
