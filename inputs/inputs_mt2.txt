@@ -1,8 +1,3 @@
-abbaabaab
-aa
+abbab
 bb
-ab
-aabb
-bbaa
-a
-b
+aa

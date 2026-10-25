@@ -11,6 +11,8 @@ std::string TuringMachine::keyFor(const std::string& state,
 
 bool TuringMachine::run(const std::vector<std::string>& input, std::ostream& out) {
     tapes.clear();
+    
+    // Cada cinta conserva sus propias celdas y la posicion de su cabezal.
     for (int i = 0; i < def.numTapes; ++i) tapes.emplace_back(def.blank);
     tapes[0].setInput(input);
     currentState = def.s;
@@ -22,6 +24,8 @@ bool TuringMachine::run(const std::vector<std::string>& input, std::ostream& out
         auto it = def.delta.find(key);
         if (it == def.delta.end()) break;
         const Transition& tr = it->second;
+
+        // Cada indice aplica a una cinta su escritura y movimiento propios.
         for (int i = 0; i < def.numTapes; ++i) {
             tapes[i].write(tr.writes[i]);
             tapes[i].move(tr.moves[i]);

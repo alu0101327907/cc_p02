@@ -33,19 +33,20 @@ build/turing -config <configuracion MT> -in <input>
 ```bash
 # MT1: L = { a^n b^m | m >= n, n > 0 }
 # MT de 2 cintas
-q0 q1 q2
+i q0 q1 q2
 a b
 a b _
-q0
+i
 _
 q2
 2
 
 # q_origen leido1 leido2 q_destino escrito1 escrito2 mov1 mov2
+i a _ q0 a a R R
 q0 a _ q0 a a R R
 q0 b _ q1 b _ S L
-q1 b a q1 b a R L
-q1 _ a q2 _ a S S
+q1 b a q1 a b R L
+q1 b _ q1 b b R L
 q1 _ _ q2 _ _ S S
 ```
 
@@ -61,7 +62,7 @@ a b
 a b _ 1 0
 q0
 _
-q0
+q8
 2
 
 # q_origen leido1 leido2 q_destino escrito1 escrito2 mov1 mov2
